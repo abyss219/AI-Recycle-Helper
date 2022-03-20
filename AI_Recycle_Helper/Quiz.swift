@@ -39,15 +39,17 @@ struct Quiz{
     
     mutating func checkAns(userAnswer:[String])->Bool {
         var flag = true;
+        var correctChoice = 0;
+        
         for correctAns in questions[currentQustionNum].answers{
             if (userAnswer.contains(questions[currentQustionNum].options[correctAns])){
-                print(questions[currentQustionNum].options[correctAns])
-                self.score += (10/(questions[currentQustionNum].answers.count));
+                correctChoice+=1
+                //self.score += (10/(questions[currentQustionNum].answers.count));
             }else{
                 flag = false
             }
-            
         }
+        self.score += correctChoice*10/questions[currentQustionNum].answers.count;
         return flag
     }
     

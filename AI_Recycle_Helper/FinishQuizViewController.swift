@@ -12,7 +12,7 @@ class FinishQuizViewController: UIViewController {
     var score:Int?;
     override func viewDidLoad() {
         super.viewDidLoad()
-        scoreLabel.text = String(score!)
+        scoreLabel.text = ("Your score: "+String(score!)+"/100")
         //scoreLabel.text = String(format:"%.0f",score);
         // Do any additional setup after loading the view.
     }

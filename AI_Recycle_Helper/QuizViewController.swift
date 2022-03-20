@@ -89,11 +89,14 @@ class QuizViewController: UIViewController {
                 if myquestion.answers.contains(i) && userSelectList.contains(myquestion.options[i]){
                     //green
                     buttonList[5-myquestion.options.count+i]?.backgroundColor=UIColor(red: 227/255, green: 253/255, blue: 253/255, alpha: 1.0)
+                    buttonList[5-myquestion.options.count+i]?.layer.cornerRadius=14
                     
                 }else if (!myquestion.answers.contains(i) && !userSelectList.contains(myquestion.options[i])){
                     buttonList[5-myquestion.options.count+i]?.backgroundColor=UIColor.clear
+                    buttonList[5-myquestion.options.count+i]?.layer.cornerRadius=14
                 }else{
                     buttonList[5-myquestion.options.count+i]?.backgroundColor=UIColor(red: 255/255, green: 226/255, blue: 226/255, alpha: 1.0)
+                    buttonList[5-myquestion.options.count+i]?.layer.cornerRadius=14
                 }
    
             }
@@ -147,6 +150,7 @@ class QuizViewController: UIViewController {
             buttonList[i]?.isEnabled=false;
             buttonList[i]?.alpha=0;
             buttonList[i]?.backgroundColor=UIColor.clear;
+            buttonList[i]?.layer.cornerRadius=14
         }
         for index in 0...(questionsOption.count-1){
              buttonList[5-questionsOption.count+index]?.setTitle(questionsOption[index], for: .normal);

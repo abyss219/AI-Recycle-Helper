@@ -37,7 +37,7 @@ class AiDetectViewController: UIViewController, UIImagePickerControllerDelegate,
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        myResult.text=""
+        myResult.text=" "
         imagePicker.delegate = self
         self.nextButton.alpha=0
         self.view.backgroundColor=UIColor.white
@@ -183,10 +183,14 @@ class AiDetectViewController: UIViewController, UIImagePickerControllerDelegate,
     }
     
     @IBAction func cameraIsTapped(_ sender: UIBarButtonItem) {
+        openCamers()
+       // self.view.backgroundColor=UIColor.white
+    }
+    
+    func openCamers(){
         self.imagePicker.sourceType = .camera
         self.imagePicker.allowsEditing = false
         present(imagePicker, animated: true, completion: nil)
-       // self.view.backgroundColor=UIColor.white
     }
 }
 

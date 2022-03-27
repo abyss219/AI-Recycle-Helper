@@ -25,10 +25,15 @@ struct Quiz{
         Question(questionText: "Paper napkins go in which cart?", options: ["Trash Cart","Recycling Cart"], answers: [0], hasImage: true,hint: "1"),
         Question(questionText: "Polystyrene goes in which cart?", options: ["Trash Cart","Recycling Cart"], answers: [0], hasImage: true,hint: "1"),
         Question(questionText: "Plastic hangers go in which cart?", options: ["Trash cart","Recycling Cart"], answers: [0], hasImage: true,hint: "1"),
-        Question(questionText: "Greasy cardboard goes in which cart?", options: ["Trash cart","Recycling Cart"], answers: [0], hasImage: false,hint: "1"),
-        Question(questionText: "True or False: Shredded paper can be recycled.", options: ["TRUE","FALSE"], answers: [0], hasImage: false,hint: "1"),
-        Question(questionText: "Shampoo and lotion bottles go in which cart?", options: ["Trash Cart","Recycling Cart"], answers: [1], hasImage: false,hint: "1"),
-        Question(questionText: "Wrapping paper goes in which cart?", options: ["Trash cart","Recycle cart"], answers: [1], hasImage: false,hint: "1")
+        Question(questionText: "Greasy cardboard goes in which cart?", options: ["Trash cart","Recycling Cart"], answers: [0], hasImage: true,hint: "1"),
+        Question(questionText: "True or False: Shredded paper can be recycled.", options: ["TRUE","FALSE"], answers: [0], hasImage: true,hint: "1"),
+        Question(questionText: "Shampoo and lotion bottles go in which cart?", options: ["Trash Cart","Recycling Cart"], answers: [1], hasImage: true,hint: "1"),
+        Question(questionText: "Wrapping paper goes in which cart?", options: ["Trash cart","Recycle cart"], answers: [1], hasImage: true,hint: "1"),
+        Question(questionText: "Cartons go in which cçart?", options: ["Trash Cart","Recycling Cart"], answers: [1], hasImage: false, hint: "1"),
+        Question(questionText: "Disposable coffee cups go in which cart?", options: ["Trash Cart","Recycling Cart"], answers: [0], hasImage: false, hint: ""),
+        Question(questionText: "Plastic buckets go in which cart?", options: ["Trash Cart","Recycling Cart"], answers: [0], hasImage: false, hint: ""),
+        Question(questionText: "Plastic bags are not accepted in the recycling bin.", options: ["TRUE","FALSE"], answers: [0], hasImage: false, hint: ""),
+        Question(questionText: "Lids & caps should be removed before recycling.", options: ["TRUE","FALSE"], answers: [0], hasImage: false, hint: "Most lids are constructed of a different sort of plastic than the containers. They often have a greater melting point and may disturb the whole batch of plastic that is being recycled. Always remove the lid from any plastic containers before recycling.")
     ]
 
     

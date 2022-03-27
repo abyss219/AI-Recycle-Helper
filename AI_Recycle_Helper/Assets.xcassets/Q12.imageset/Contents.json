@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "How_bad_are_greasy_pizza.jpeg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "How_bad_are_greasy_pizza@2x.jpeg",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "How_bad_are_greasy_pizza@3x.jpeg",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

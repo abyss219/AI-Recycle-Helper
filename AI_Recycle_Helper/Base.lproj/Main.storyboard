@@ -100,7 +100,7 @@
         <scene sceneID="A5d-Ca-rUE">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4Vb-Kh-yDD" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="AI Detect" image="camera.shutter.button" catalog="system" selectedImage="camera.shutter.button" id="sR9-yA-zkL"/>
+                    <tabBarItem key="tabBarItem" tag="1" title="AI Detect" image="camera.shutter.button" catalog="system" selectedImage="camera.shutter.button" id="sR9-yA-zkL"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="umJ-qg-u6z">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -316,7 +316,7 @@
                             <constraint firstItem="9SH-2M-DWy" firstAttribute="top" secondItem="ti3-le-new" secondAttribute="top" id="xv8-TS-6Qc"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Quiz" image="pencil" catalog="system" selectedImage="pencil" id="3Uk-2U-cWh"/>
+                    <tabBarItem key="tabBarItem" tag="2" title="Quiz" image="pencil" catalog="system" selectedImage="pencil" id="3Uk-2U-cWh"/>
                     <connections>
                         <outlet property="b1" destination="Fm9-DO-pg5" id="MWM-sW-QBF"/>
                         <outlet property="b2" destination="b0F-qw-E4b" id="6cu-dq-jr2"/>
@@ -381,10 +381,10 @@
             </objects>
             <point key="canvasLocation" x="-804.34782608695662" y="2025.6696428571427"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Main Tab Bar Controller-->
         <scene sceneID="8F2-ua-c3C">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="cxO-xv-JYE" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="cxO-xv-JYE" customClass="MainTabBarController" customModule="AI_Recycle_Helper" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ICW-FM-9mA">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>

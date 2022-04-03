@@ -256,13 +256,13 @@
                                             <constraint firstAttribute="trailing" secondItem="Fm9-DO-pg5" secondAttribute="trailing" id="rj4-hI-Urm"/>
                                         </constraints>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" spacing="250" translatesAutoresizingMaskIntoConstraints="NO" id="NcU-AD-ucl" userLabel="PreNextStackView">
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" spacing="270" translatesAutoresizingMaskIntoConstraints="NO" id="NcU-AD-ucl" userLabel="PreNextStackView">
                                         <rect key="frame" x="10" y="705" width="394" height="30"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="UHa-jk-uH4">
-                                                <rect key="frame" x="0.0" y="0.0" width="122.5" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="84" height="30"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Show Answer" titleAlignment="leading">
+                                                <buttonConfiguration key="configuration" style="plain" title="Why?" titleAlignment="leading">
                                                     <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
                                                 </buttonConfiguration>
                                                 <connections>
@@ -270,9 +270,15 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ISY-YW-37Y" userLabel="Next Question">
-                                                <rect key="frame" x="372.5" y="0.0" width="21.5" height="30"/>
+                                                <rect key="frame" x="354" y="0.0" width="40" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="6me-wx-neg"/>
+                                                </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="arrow.right" catalog="system" title="" imagePadding="30">
+                                                    <backgroundConfiguration key="background">
+                                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                    </backgroundConfiguration>
                                                     <directionalEdgeInsets key="contentInsets" top="0.0" leading="0.0" bottom="0.0" trailing="0.0"/>
                                                 </buttonConfiguration>
                                                 <connections>
@@ -433,26 +439,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IPZ-9O-k16" userLabel="hintView">
-                                <rect key="frame" x="61" y="336" width="290" height="389"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IPZ-9O-k16" userLabel="hintView">
+                                <rect key="frame" x="30" y="494" width="354" height="338"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Hindfdddddddd dddddddddddd dddddddddddddddwwwwww wwwwwwwww" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FeO-Th-rQk" userLabel="Hint">
-                                        <rect key="frame" x="0.0" y="0.0" width="282" height="21"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="282" id="22P-Za-Ihs"/>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="stA-lS-1eB"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reasons" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FeO-Th-rQk" userLabel="Hint">
+                                        <rect key="frame" x="5" y="5" width="344" height="21.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
+                                        <size key="shadowOffset" width="2" height="-1"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="FeO-Th-rQk" firstAttribute="top" secondItem="IPZ-9O-k16" secondAttribute="top" constant="5" id="9M9-bc-cR7"/>
+                                    <constraint firstItem="FeO-Th-rQk" firstAttribute="leading" secondItem="IPZ-9O-k16" secondAttribute="leading" constant="5" id="LN8-Rh-EEy"/>
+                                    <constraint firstAttribute="trailing" secondItem="FeO-Th-rQk" secondAttribute="trailing" constant="5" id="oBv-9y-nOg"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Fpu-QV-UQv"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="IPZ-9O-k16" firstAttribute="leading" secondItem="PeM-Lg-vtn" secondAttribute="leadingMargin" constant="10" id="WeW-bI-WS4"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="IPZ-9O-k16" secondAttribute="bottom" constant="10" id="hOJ-wq-g0n"/>
+                            <constraint firstItem="IPZ-9O-k16" firstAttribute="top" secondItem="PeM-Lg-vtn" secondAttribute="topMargin" constant="450" id="hwx-J2-af2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="IPZ-9O-k16" secondAttribute="trailing" constant="10" id="zY8-hM-YPJ"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="hintText" destination="FeO-Th-rQk" id="vCk-ou-EaG"/>
@@ -483,6 +496,9 @@
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

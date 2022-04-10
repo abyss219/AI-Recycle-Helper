@@ -11,10 +11,12 @@ class HintViewController: UIViewController {
     var hint:String?
     @IBOutlet weak var hintText: UILabel!
     
+    @IBOutlet weak var hintView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
         hintText.text=hint
-        
+        hintView.layer.cornerRadius = 25;
+        hintView.layer.masksToBounds = true;
         // Do any additional setup after loading the view.
     }
     

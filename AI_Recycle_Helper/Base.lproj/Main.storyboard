@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -95,6 +96,44 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1374" y="1521"/>
+        </scene>
+        <!--AI Detect 2-->
+        <scene sceneID="Gff-x0-4Ye">
+            <objects>
+                <viewController title="AI Detect 2" id="Sun-W7-HXn" customClass="AIViewController" customModule="AI_Recycle_Helper" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Yb2-dH-Hjt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Result" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fY5-II-Oo1">
+                                <rect key="frame" x="157" y="123" width="100" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="boC-Ye-krx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eEc-Yn-43R">
+                                <rect key="frame" x="40" y="343" width="335" height="262"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="CCg-f3-dnS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fY5-II-Oo1" firstAttribute="centerX" secondItem="Yb2-dH-Hjt" secondAttribute="centerX" id="P6A-b4-pbv"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" tag="3" title="AI Detect 2" image="camera" catalog="system" selectedImage="camera" id="rh6-NI-kKN"/>
+                    <connections>
+                        <outlet property="image" destination="eEc-Yn-43R" id="VqZ-38-FA1"/>
+                        <outlet property="resultText" destination="fY5-II-Oo1" id="ukA-RJ-QvG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zfx-ag-yud" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2521.739130434783" y="547.76785714285711"/>
         </scene>
         <!--AI Detect-->
         <scene sceneID="A5d-Ca-rUE">
@@ -351,35 +390,54 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="ZVG-YB-uA4">
-                                <rect key="frame" x="150.5" y="367" width="113.5" height="162"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="dkO-Qo-ppv">
+                                <rect key="frame" x="75" y="184" width="264.5" height="528"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CuU-7k-gzv" userLabel="Score">
-                                        <rect key="frame" x="0.0" y="0.0" width="113.5" height="31"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IEK-GL-9XY" userLabel="Restart">
-                                        <rect key="frame" x="0.0" y="131" width="113.5" height="31"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="arrow.clockwise" catalog="system" title=""/>
-                                        <connections>
-                                            <action selector="restartButtonPressed:" destination="VUD-fb-Zcz" eventType="touchUpInside" id="3nN-q6-jPN"/>
-                                        </connections>
-                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pki-bj-qXw">
+                                        <rect key="frame" x="0.0" y="0.0" width="264.5" height="278"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="ZVG-YB-uA4">
+                                        <rect key="frame" x="64.5" y="328" width="135.5" height="200"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CuU-7k-gzv" userLabel="Score">
+                                                <rect key="frame" x="0.0" y="0.0" width="135.5" height="75"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IEK-GL-9XY" userLabel="Restart">
+                                                <rect key="frame" x="0.0" y="125" width="135.5" height="75"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="" buttonSize="large">
+                                                    <imageReference key="image" image="arrow.clockwise" catalog="system" symbolScale="large"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="restartButtonPressed:" destination="VUD-fb-Zcz" eventType="touchUpInside" id="3nN-q6-jPN"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="pki-bj-qXw" secondAttribute="trailing" id="AYa-Gf-e4J"/>
+                                    <constraint firstItem="pki-bj-qXw" firstAttribute="leading" secondItem="dkO-Qo-ppv" secondAttribute="leading" id="OeP-di-oTG"/>
+                                    <constraint firstItem="pki-bj-qXw" firstAttribute="top" secondItem="dkO-Qo-ppv" secondAttribute="top" id="Oku-Y6-8UJ"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="o3w-6r-7jD"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="ZVG-YB-uA4" firstAttribute="centerY" secondItem="kh3-kg-8pM" secondAttribute="centerY" id="QpG-BD-fjk"/>
-                            <constraint firstItem="ZVG-YB-uA4" firstAttribute="centerX" secondItem="kh3-kg-8pM" secondAttribute="centerX" id="mmi-qK-J7O"/>
+                            <constraint firstItem="dkO-Qo-ppv" firstAttribute="leading" secondItem="o3w-6r-7jD" secondAttribute="leading" constant="75" id="0rv-hj-Kkk"/>
+                            <constraint firstItem="o3w-6r-7jD" firstAttribute="bottom" secondItem="dkO-Qo-ppv" secondAttribute="bottom" constant="150" id="Fxa-g1-dUl"/>
+                            <constraint firstItem="dkO-Qo-ppv" firstAttribute="top" secondItem="o3w-6r-7jD" secondAttribute="top" constant="140" id="GrF-x1-gkb"/>
+                            <constraint firstItem="o3w-6r-7jD" firstAttribute="trailing" secondItem="dkO-Qo-ppv" secondAttribute="trailing" constant="74.5" id="itW-G2-qXg"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="0B1-Y9-10c"/>
                     <connections>
+                        <outlet property="medalImage" destination="pki-bj-qXw" id="zVB-KJ-bZy"/>
+                        <outlet property="restartIcon" destination="IEK-GL-9XY" id="mSc-5P-309"/>
                         <outlet property="scoreLabel" destination="CuU-7k-gzv" id="8N8-Fe-ep1"/>
                     </connections>
                 </viewController>
@@ -400,6 +458,8 @@
                         <segue destination="Aml-5e-gre" kind="relationship" relationship="viewControllers" id="e0Y-pN-1xC"/>
                         <segue destination="4Vb-Kh-yDD" kind="relationship" relationship="viewControllers" id="EYp-Op-iyP"/>
                         <segue destination="ObK-nt-4FB" kind="relationship" relationship="viewControllers" id="Lwy-It-vfn"/>
+                        <segue destination="Sun-W7-HXn" kind="relationship" relationship="viewControllers" id="XtR-O4-OZs"/>
+                        <segue destination="Sun-W7-HXn" kind="presentation" identifier="goToAIDetectResult" modalPresentationStyle="fullScreen" id="Lle-UU-bv4"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b5s-Bw-lOR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -443,7 +503,7 @@
                                 <rect key="frame" x="30" y="494" width="354" height="338"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reasons" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FeO-Th-rQk" userLabel="Hint">
-                                        <rect key="frame" x="5" y="5" width="344" height="21.5"/>
+                                        <rect key="frame" x="20" y="20" width="314" height="21.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -452,9 +512,9 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="FeO-Th-rQk" firstAttribute="top" secondItem="IPZ-9O-k16" secondAttribute="top" constant="5" id="9M9-bc-cR7"/>
-                                    <constraint firstItem="FeO-Th-rQk" firstAttribute="leading" secondItem="IPZ-9O-k16" secondAttribute="leading" constant="5" id="LN8-Rh-EEy"/>
-                                    <constraint firstAttribute="trailing" secondItem="FeO-Th-rQk" secondAttribute="trailing" constant="5" id="oBv-9y-nOg"/>
+                                    <constraint firstItem="FeO-Th-rQk" firstAttribute="top" secondItem="IPZ-9O-k16" secondAttribute="top" constant="20" id="9M9-bc-cR7"/>
+                                    <constraint firstItem="FeO-Th-rQk" firstAttribute="leading" secondItem="IPZ-9O-k16" secondAttribute="leading" constant="20" id="LN8-Rh-EEy"/>
+                                    <constraint firstAttribute="trailing" secondItem="FeO-Th-rQk" secondAttribute="trailing" constant="20" id="oBv-9y-nOg"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -469,6 +529,7 @@
                     </view>
                     <connections>
                         <outlet property="hintText" destination="FeO-Th-rQk" id="vCk-ou-EaG"/>
+                        <outlet property="hintView" destination="IPZ-9O-k16" id="GIs-HU-6Qa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q7Y-gM-fi5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -476,9 +537,13 @@
             <point key="canvasLocation" x="53.623188405797109" y="1952.6785714285713"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Lle-UU-bv4"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="arrow.clockwise" catalog="system" width="115" height="128"/>
         <image name="arrow.right" catalog="system" width="128" height="98"/>
+        <image name="camera" catalog="system" width="128" height="94"/>
         <image name="camera.shutter.button" catalog="system" width="128" height="109"/>
         <image name="homekit" catalog="system" width="128" height="106"/>
         <image name="pencil" catalog="system" width="128" height="113"/>

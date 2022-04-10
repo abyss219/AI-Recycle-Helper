@@ -31,10 +31,10 @@ class AiDetectViewController: UIViewController, UIImagePickerControllerDelegate,
     var furniture=["desk"]
     
     @IBOutlet weak var photoImageView: UIImageView!
-
+    
     var classificationResults : [VNClassificationObservation] = []
     let imagePicker = UIImagePickerController()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         myResult.text=" "
@@ -45,7 +45,7 @@ class AiDetectViewController: UIViewController, UIImagePickerControllerDelegate,
     }
     
     func detect(image: CIImage) {
-
+        
         // Load the ML model through its generated class
         guard let model = try? VNCoreMLModel(for: Inceptionv3().model) else {
             fatalError("can't load ML model")

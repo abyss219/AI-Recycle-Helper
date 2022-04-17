@@ -102,32 +102,74 @@
             <objects>
                 <viewController title="AI Detect 2" id="Sun-W7-HXn" customClass="AIViewController" customModule="AI_Recycle_Helper" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Yb2-dH-Hjt">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Result" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fY5-II-Oo1">
-                                <rect key="frame" x="157" y="123" width="100" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="boC-Ye-krx"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eEc-Yn-43R">
-                                <rect key="frame" x="40" y="343" width="335" height="262"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="188" translatesAutoresizingMaskIntoConstraints="NO" id="sND-ZD-GRP">
+                                <rect key="frame" x="10" y="54" width="394" height="778"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="54" translatesAutoresizingMaskIntoConstraints="NO" id="5bV-Hw-WII">
+                                        <rect key="frame" x="40" y="0.0" width="354" height="559"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jmt-Fk-hKR" userLabel="Exit View">
+                                                <rect key="frame" x="0.0" y="0.0" width="107.5" height="275.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O6C-HN-WXt">
+                                                        <rect key="frame" x="20" y="20" width="67.5" height="31"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" image="chevron.down" catalog="system" title="exit"/>
+                                                        <connections>
+                                                            <action selector="backButton:" destination="Sun-W7-HXn" eventType="touchUpInside" id="x5s-QL-shd"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            </view>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eEc-Yn-43R">
+                                                <rect key="frame" x="0.0" y="329.5" width="354" height="155"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="155" id="Ez8-sn-vTy"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fY5-II-Oo1">
+                                                <rect key="frame" x="0.0" y="538.5" width="47.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="270" translatesAutoresizingMaskIntoConstraints="NO" id="BRN-i5-GdL">
+                                        <rect key="frame" x="50" y="747" width="344" height="31"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JYO-c8-RFc" userLabel="Last Result">
+                                                <rect key="frame" x="0.0" y="0.0" width="37" height="31"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="chevron.backward" catalog="system" title=""/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Za1-QU-XrO" userLabel="Next Result">
+                                                <rect key="frame" x="307" y="0.0" width="37" height="31"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="chevron.forward" catalog="system" title=""/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="CCg-f3-dnS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="fY5-II-Oo1" firstAttribute="centerX" secondItem="Yb2-dH-Hjt" secondAttribute="centerX" id="P6A-b4-pbv"/>
+                            <constraint firstItem="sND-ZD-GRP" firstAttribute="leading" secondItem="CCg-f3-dnS" secondAttribute="leading" constant="10" id="FDT-6C-KaL"/>
+                            <constraint firstItem="CCg-f3-dnS" firstAttribute="trailing" secondItem="sND-ZD-GRP" secondAttribute="trailing" constant="10" id="LXl-J6-FFx"/>
+                            <constraint firstItem="CCg-f3-dnS" firstAttribute="bottom" secondItem="sND-ZD-GRP" secondAttribute="bottom" constant="10" id="MrI-sg-1mk"/>
+                            <constraint firstItem="sND-ZD-GRP" firstAttribute="top" secondItem="CCg-f3-dnS" secondAttribute="top" constant="10" id="fPZ-tp-lZ8"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" tag="3" title="AI Detect 2" image="camera" catalog="system" selectedImage="camera" id="rh6-NI-kKN"/>
                     <connections>
-                        <outlet property="image" destination="eEc-Yn-43R" id="VqZ-38-FA1"/>
+                        <outlet property="detectImage" destination="eEc-Yn-43R" id="afi-eW-cb0"/>
                         <outlet property="resultText" destination="fY5-II-Oo1" id="ukA-RJ-QvG"/>
                     </connections>
                 </viewController>
@@ -459,7 +501,7 @@
                         <segue destination="4Vb-Kh-yDD" kind="relationship" relationship="viewControllers" id="EYp-Op-iyP"/>
                         <segue destination="ObK-nt-4FB" kind="relationship" relationship="viewControllers" id="Lwy-It-vfn"/>
                         <segue destination="Sun-W7-HXn" kind="relationship" relationship="viewControllers" id="XtR-O4-OZs"/>
-                        <segue destination="Sun-W7-HXn" kind="presentation" identifier="goToAIDetectResult" modalPresentationStyle="fullScreen" id="Lle-UU-bv4"/>
+                        <segue destination="Sun-W7-HXn" kind="presentation" identifier="goToAIDetectResult" id="Lle-UU-bv4"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b5s-Bw-lOR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -545,6 +587,9 @@
         <image name="arrow.right" catalog="system" width="128" height="98"/>
         <image name="camera" catalog="system" width="128" height="94"/>
         <image name="camera.shutter.button" catalog="system" width="128" height="109"/>
+        <image name="chevron.backward" catalog="system" width="96" height="128"/>
+        <image name="chevron.down" catalog="system" width="128" height="72"/>
+        <image name="chevron.forward" catalog="system" width="96" height="128"/>
         <image name="homekit" catalog="system" width="128" height="106"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
         <namedColor name="AccentColor">

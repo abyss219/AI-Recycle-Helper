@@ -14,7 +14,7 @@ import Social
 class MainTabBarController: UITabBarController, UIImagePickerControllerDelegate, UITabBarControllerDelegate, UINavigationControllerDelegate{
     
     var r = ["","","","",""]
-    
+    var UIimage = UIImage()
     var imagePicker2 = UIImagePickerController()
  
     var classificationResults : [VNClassificationObservation] = []
@@ -30,15 +30,19 @@ class MainTabBarController: UITabBarController, UIImagePickerControllerDelegate,
     
     
     func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
- 
-        return true
+        if viewController.tabBarItem.tag == 3 {
+                print(viewController.tabBarItem.tag)
+            return false
+        } else {
+            return true
+        }
     }
     
     
     func detect(image: CIImage) {
         print("decting...............")
         // Load the ML model through its generated class
-        guard let model = try? VNCoreMLModel(for: Inceptionv3().model) else {
+        guard let model = try? VNCoreMLModel(for: AIDetect2().model) else {
             fatalError("can't load ML model")
         }
  
@@ -51,8 +55,9 @@ class MainTabBarController: UITabBarController, UIImagePickerControllerDelegate,
             }
             for i in 0...4{
                 self.r[i] = results[i].identifier
+                
             }
-            
+            print(self.r)
             //print("third \(results[2].identifier)")
         }
  
@@ -73,8 +78,9 @@ class MainTabBarController: UITabBarController, UIImagePickerControllerDelegate,
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             if segue.identifier == "goToAIDetectResult" {
                 let destinationVC = segue.destination as! AIViewController
-             destinationVC.results = r
-        
+                destinationVC.results = r
+                //print("The image2", UIimage)
+                destinationVC.theImage = UIimage
            }
     }
     
@@ -82,14 +88,17 @@ class MainTabBarController: UITabBarController, UIImagePickerControllerDelegate,
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
  
         if let image = info[.originalImage] as? UIImage {
- 
+            self.UIimage = image
             //self.photoImageView.image = image
             self.imagePicker2.dismiss(animated: true, completion: nil)
             guard let ciImage = CIImage(image: image) else {
                 fatalError("couldn't convert uiimage to CIImage")
             }
             self.detect(image: ciImage)
+            
+            //print("The image" , image)
         }
+        
     }
     
     

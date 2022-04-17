@@ -17,6 +17,7 @@
 		940F1B7627656960002802D7 /* AI_Recycle_HelperUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F1B7527656960002802D7 /* AI_Recycle_HelperUITests.swift */; };
 		940F1B7827656960002802D7 /* AI_Recycle_HelperUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F1B7727656960002802D7 /* AI_Recycle_HelperUITestsLaunchTests.swift */; };
 		940F1B8527656979002802D7 /* Inceptionv3.mlkitmodel in Sources */ = {isa = PBXBuildFile; fileRef = 940F1B8427656979002802D7 /* Inceptionv3.mlkitmodel */; };
+		94342D74280C89C100538C6D /* AIDetect2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 94342D73280C89C000538C6D /* AIDetect2.mlmodel */; };
 		94712BF327F0D85A001054FD /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94712BF227F0D85A001054FD /* MainTabBarController.swift */; };
 		947396FD278BB1880059F015 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947396FC278BB1880059F015 /* QuizViewController.swift */; };
 		947396FF278BB2530059F015 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947396FE278BB2530059F015 /* HomeViewController.swift */; };
@@ -59,6 +60,7 @@
 		940F1B7527656960002802D7 /* AI_Recycle_HelperUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AI_Recycle_HelperUITests.swift; sourceTree = "<group>"; };
 		940F1B7727656960002802D7 /* AI_Recycle_HelperUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AI_Recycle_HelperUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		940F1B8427656979002802D7 /* Inceptionv3.mlkitmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Inceptionv3.mlkitmodel; sourceTree = "<group>"; };
+		94342D73280C89C000538C6D /* AIDetect2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = AIDetect2.mlmodel; sourceTree = "<group>"; };
 		94712BF227F0D85A001054FD /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		947396FC278BB1880059F015 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 		947396FE278BB2530059F015 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				940F1B5D27656960002802D7 /* Assets.xcassets */,
 				940F1B5F27656960002802D7 /* LaunchScreen.storyboard */,
 				940F1B8427656979002802D7 /* Inceptionv3.mlkitmodel */,
+				94342D73280C89C000538C6D /* AIDetect2.mlmodel */,
 				940F1B6227656960002802D7 /* Info.plist */,
 				947396FC278BB1880059F015 /* QuizViewController.swift */,
 				947396FE278BB2530059F015 /* HomeViewController.swift */,
@@ -293,6 +296,7 @@
 				940F1B592765695F002802D7 /* AiDetectViewController.swift in Sources */,
 				94CF151427B9948D008008DC /* HintViewController.swift in Sources */,
 				940F1B552765695F002802D7 /* AppDelegate.swift in Sources */,
+				94342D74280C89C100538C6D /* AIDetect2.mlmodel in Sources */,
 				940F1B572765695F002802D7 /* SceneDelegate.swift in Sources */,
 				94739703278BB8F70059F015 /* Question.swift in Sources */,
 				94A4A98427FA175F0073390C /* AIViewController.swift in Sources */,

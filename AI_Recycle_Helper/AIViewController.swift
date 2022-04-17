@@ -12,14 +12,20 @@ class AIViewController: UIViewController{
     
     @IBOutlet weak var resultText: UILabel!
     
-    @IBOutlet weak var image: UIImageView!
-    
-    var results = ["123","","","",""]
+    @IBOutlet weak var detectImage: UIImageView!
+
+    @IBAction func backButton(_ sender: Any) {
+        dismiss(animated: true,completion:nil)
+        
+    }
+    var results = ["","","","",""]
+    var theImage = UIImage()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         resultText.text=results[0]
-
+        print("the image 3",theImage)
+        detectImage.image = theImage
        
     }
   

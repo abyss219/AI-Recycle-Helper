@@ -164,7 +164,12 @@ class AiDetectViewController: UIViewController, UIImagePickerControllerDelegate,
     }
     
     
-    
+    func noResult(){
+        var imageView : UIImageView
+        imageView  = UIImageView(frame:CGRect(x: 10, y: 50, width: 100, height: 300));
+            imageView.image = UIImage(named:"Q6.jpg")
+            self.view.addSubview(imageView)
+    }
     
     
     var count=0

@@ -28,7 +28,7 @@ class MainTabBarController: UITabBarController, UIImagePickerControllerDelegate,
         // Do any additional setup after loading the view.
     }
     
-    
+   /*
     func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
         if viewController.tabBarItem.tag == 3 {
                 print(viewController.tabBarItem.tag)
@@ -37,7 +37,7 @@ class MainTabBarController: UITabBarController, UIImagePickerControllerDelegate,
             return true
         }
     }
-    
+    */
     
     func detect(image: CIImage) {
         print("decting...............")
@@ -105,7 +105,7 @@ class MainTabBarController: UITabBarController, UIImagePickerControllerDelegate,
     
     
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
-            if item.tag == 3 {
+            if item.tag == 1 {
                 openCamers()
             }
           

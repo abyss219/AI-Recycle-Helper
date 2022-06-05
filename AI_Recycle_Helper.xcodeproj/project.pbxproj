@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		940F1B552765695F002802D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F1B542765695F002802D7 /* AppDelegate.swift */; };
 		940F1B572765695F002802D7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F1B562765695F002802D7 /* SceneDelegate.swift */; };
-		940F1B592765695F002802D7 /* AiDetectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F1B582765695F002802D7 /* AiDetectViewController.swift */; };
+		940F1B592765695F002802D7 /* AiDetectViewController_Remove.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F1B582765695F002802D7 /* AiDetectViewController_Remove.swift */; };
 		940F1B5C2765695F002802D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 940F1B5A2765695F002802D7 /* Main.storyboard */; };
 		940F1B5E27656960002802D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 940F1B5D27656960002802D7 /* Assets.xcassets */; };
 		940F1B6127656960002802D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 940F1B5F27656960002802D7 /* LaunchScreen.storyboard */; };
@@ -49,7 +49,7 @@
 		940F1B512765695F002802D7 /* AI_Recycle_Helper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AI_Recycle_Helper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		940F1B542765695F002802D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		940F1B562765695F002802D7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		940F1B582765695F002802D7 /* AiDetectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AiDetectViewController.swift; sourceTree = "<group>"; };
+		940F1B582765695F002802D7 /* AiDetectViewController_Remove.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AiDetectViewController_Remove.swift; sourceTree = "<group>"; };
 		940F1B5B2765695F002802D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		940F1B5D27656960002802D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		940F1B6027656960002802D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -121,16 +121,16 @@
 			children = (
 				940F1B542765695F002802D7 /* AppDelegate.swift */,
 				940F1B562765695F002802D7 /* SceneDelegate.swift */,
-				940F1B582765695F002802D7 /* AiDetectViewController.swift */,
+				947396FE278BB2530059F015 /* HomeViewController.swift */,
+				947396FC278BB1880059F015 /* QuizViewController.swift */,
 				94A4A98327FA175F0073390C /* AIViewController.swift */,
 				940F1B5A2765695F002802D7 /* Main.storyboard */,
 				940F1B5D27656960002802D7 /* Assets.xcassets */,
 				940F1B5F27656960002802D7 /* LaunchScreen.storyboard */,
 				940F1B8427656979002802D7 /* Inceptionv3.mlkitmodel */,
 				94342D73280C89C000538C6D /* AIDetect2.mlmodel */,
+				940F1B582765695F002802D7 /* AiDetectViewController_Remove.swift */,
 				940F1B6227656960002802D7 /* Info.plist */,
-				947396FC278BB1880059F015 /* QuizViewController.swift */,
-				947396FE278BB2530059F015 /* HomeViewController.swift */,
 				94739702278BB8F70059F015 /* Question.swift */,
 				94739704278BBCE30059F015 /* Quiz.swift */,
 				94CF151327B9948D008008DC /* HintViewController.swift */,
@@ -293,7 +293,7 @@
 				94712BF327F0D85A001054FD /* MainTabBarController.swift in Sources */,
 				948EF7B627D541250006DA7F /* FinishQuizViewController.swift in Sources */,
 				947396FD278BB1880059F015 /* QuizViewController.swift in Sources */,
-				940F1B592765695F002802D7 /* AiDetectViewController.swift in Sources */,
+				940F1B592765695F002802D7 /* AiDetectViewController_Remove.swift in Sources */,
 				94CF151427B9948D008008DC /* HintViewController.swift in Sources */,
 				940F1B552765695F002802D7 /* AppDelegate.swift in Sources */,
 				94342D74280C89C100538C6D /* AIDetect2.mlmodel in Sources */,

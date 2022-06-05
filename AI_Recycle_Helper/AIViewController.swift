@@ -14,10 +14,7 @@ class AIViewController: UIViewController{
     
     @IBOutlet weak var detectImage: UIImageView!
 
-    @IBAction func backButton(_ sender: Any) {
-        dismiss(animated: true,completion:nil)
-        
-    }
+
     var results = ["","","","",""]
     var theImage = UIImage()
     

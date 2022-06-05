@@ -10,22 +10,22 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Ai Detect View Controller-->
+        <!--Ai Detect View Controller Remove-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="AiDetectViewController" customModule="AI_Recycle_Helper" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="AiDetectViewController_Remove" customModule="AI_Recycle_Helper" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="IIJ-BD-Wec">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zRX-1X-4wG">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="474"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="523"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="MA8-7B-ycA" userLabel="BottomView">
-                                        <rect key="frame" x="0.0" y="475" width="414" height="250"/>
+                                        <rect key="frame" x="0.0" y="524" width="414" height="250"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sleeping Bag" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="grf-LC-8Sk">
                                                 <rect key="frame" x="57" y="0.0" width="300" height="124.5"/>
@@ -95,45 +95,34 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1374" y="1521"/>
+            <point key="canvasLocation" x="2271" y="2245"/>
         </scene>
         <!--AI Detect 2-->
         <scene sceneID="Gff-x0-4Ye">
             <objects>
                 <viewController title="AI Detect 2" id="Sun-W7-HXn" customClass="AIViewController" customModule="AI_Recycle_Helper" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Yb2-dH-Hjt">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="188" translatesAutoresizingMaskIntoConstraints="NO" id="sND-ZD-GRP">
-                                <rect key="frame" x="10" y="54" width="394" height="798"/>
+                                <rect key="frame" x="10" y="54" width="394" height="778"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="54" translatesAutoresizingMaskIntoConstraints="NO" id="5bV-Hw-WII">
-                                        <rect key="frame" x="40" y="0.0" width="354" height="579"/>
+                                        <rect key="frame" x="40" y="0.0" width="354" height="559"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jmt-Fk-hKR" userLabel="Exit View">
-                                                <rect key="frame" x="0.0" y="0.0" width="107.5" height="295.5"/>
-                                                <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O6C-HN-WXt">
-                                                        <rect key="frame" x="20" y="20" width="67.5" height="31"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" image="chevron.down" catalog="system" title="exit"/>
-                                                        <connections>
-                                                            <action selector="backButton:" destination="Sun-W7-HXn" eventType="touchUpInside" id="x5s-QL-shd"/>
-                                                        </connections>
-                                                    </button>
-                                                </subviews>
+                                                <rect key="frame" x="0.0" y="0.0" width="107.5" height="275.5"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             </view>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eEc-Yn-43R">
-                                                <rect key="frame" x="0.0" y="349.5" width="354" height="155"/>
+                                                <rect key="frame" x="0.0" y="329.5" width="354" height="155"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="155" id="Ez8-sn-vTy"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fY5-II-Oo1">
-                                                <rect key="frame" x="0.0" y="558.5" width="47.5" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="538.5" width="47.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -141,7 +130,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="270" translatesAutoresizingMaskIntoConstraints="NO" id="BRN-i5-GdL">
-                                        <rect key="frame" x="50" y="767" width="344" height="31"/>
+                                        <rect key="frame" x="50" y="747" width="344" height="31"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JYO-c8-RFc" userLabel="Last Result">
                                                 <rect key="frame" x="0.0" y="0.0" width="37" height="31"/>
@@ -175,7 +164,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zfx-ag-yud" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2521.739130434783" y="547.76785714285711"/>
+            <point key="canvasLocation" x="2270" y="64"/>
         </scene>
         <!--AI Detect-->
         <scene sceneID="A5d-Ca-rUE">
@@ -198,7 +187,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xkC-UI-WXm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1374" y="771"/>
+            <point key="canvasLocation" x="2271" y="1412"/>
         </scene>
         <!--Quiz-->
         <scene sceneID="t9S-GO-SeL">
@@ -497,14 +486,31 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </tabBar>
                     <connections>
-                        <segue destination="Aml-5e-gre" kind="relationship" relationship="viewControllers" id="e0Y-pN-1xC"/>
-                        <segue destination="4Vb-Kh-yDD" kind="relationship" relationship="viewControllers" id="EYp-Op-iyP"/>
-                        <segue destination="ObK-nt-4FB" kind="relationship" relationship="viewControllers" id="Lwy-It-vfn"/>
+                        <segue destination="Sun-W7-HXn" kind="presentation" identifier="goToAIDetectResult" id="Dv9-ju-ueZ"/>
+                        <segue destination="Aml-5e-gre" kind="relationship" relationship="viewControllers" id="aIp-YQ-2uT"/>
+                        <segue destination="78L-9F-GDX" kind="relationship" relationship="viewControllers" id="VsT-0f-S5u"/>
+                        <segue destination="ObK-nt-4FB" kind="relationship" relationship="viewControllers" id="MPC-dc-UD2"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b5s-Bw-lOR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="77.678571428571431"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="aar-79-7d3">
+            <objects>
+                <viewController id="78L-9F-GDX" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Hbi-Fb-tgp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="QgD-FU-wOQ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" tag="1" title="Item" id="4VU-TC-d4d"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xhD-wq-iwg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1349" y="808"/>
         </scene>
         <!--Home-->
         <scene sceneID="wvi-14-Uoy">
@@ -583,7 +589,6 @@
         <image name="camera" catalog="system" width="128" height="94"/>
         <image name="camera.shutter.button" catalog="system" width="128" height="109"/>
         <image name="chevron.backward" catalog="system" width="96" height="128"/>
-        <image name="chevron.down" catalog="system" width="128" height="72"/>
         <image name="chevron.forward" catalog="system" width="96" height="128"/>
         <image name="homekit" catalog="system" width="128" height="106"/>
         <image name="pencil" catalog="system" width="128" height="113"/>

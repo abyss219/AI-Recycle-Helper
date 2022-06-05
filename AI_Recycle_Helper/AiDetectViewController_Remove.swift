@@ -11,7 +11,7 @@ import CoreML
 import Vision
 import Social
 
-class AiDetectViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class AiDetectViewController_Remove: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
 
     @IBOutlet weak var myResult: UILabel!

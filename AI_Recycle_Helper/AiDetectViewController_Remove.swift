@@ -202,6 +202,3 @@ class AiDetectViewController_Remove: UIViewController, UIImagePickerControllerDe
 fileprivate func convertFromUIImagePickerControllerInfoKey(_ input: UIImagePickerController.InfoKey) -> String {
     return input.rawValue
 }
-
-
-

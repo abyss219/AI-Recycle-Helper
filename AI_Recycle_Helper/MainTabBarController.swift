@@ -13,7 +13,7 @@ import Social
 
 class MainTabBarController: UITabBarController, UIImagePickerControllerDelegate, UITabBarControllerDelegate, UINavigationControllerDelegate{
     
-    var r = ["","","","",""]
+    var r = ["","",""]
     var UIimage = UIImage()
     var imagePicker2 = UIImagePickerController()
  
@@ -53,7 +53,7 @@ class MainTabBarController: UITabBarController, UIImagePickerControllerDelegate,
                 else {
                     fatalError("unexpected result type from VNCoreMLRequest")
             }
-            for i in 0...4{
+            for i in 0..<3{
                 self.r[i] = results[i].identifier
                 
             }
@@ -83,8 +83,7 @@ class MainTabBarController: UITabBarController, UIImagePickerControllerDelegate,
                 destinationVC.theImage = UIimage
            }
     }
-    
-    
+
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
  
         if let image = info[.originalImage] as? UIImage {
@@ -100,10 +99,7 @@ class MainTabBarController: UITabBarController, UIImagePickerControllerDelegate,
         }
         
     }
-    
-    
-    
-    
+
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
             if item.tag == 1 {
                 openCamers()
@@ -111,18 +107,12 @@ class MainTabBarController: UITabBarController, UIImagePickerControllerDelegate,
           
     }
     
-
-    
     func openCamers(){
         self.imagePicker2.sourceType = .camera
         self.imagePicker2.allowsEditing = false
         present(imagePicker2, animated: true, completion: nil)
     }
 }
-    
-    
-    
-    
     
 fileprivate func convertFromUIImagePickerControllerInfoKey(_ input: UIImagePickerController.InfoKey) -> String {
     return input.rawValue

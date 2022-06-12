@@ -6,16 +6,19 @@
 //
 
 import UIKit
-
+import WebKit
 class HomeViewController: UIViewController {
 
+    @IBOutlet weak var webPage: WKWebView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        //let myURL = URL(string:"https://recyclebc.ca/category/education/")
+        webPage.load(URLRequest(url:URL(string:"https://recyclebc.ca/category/education/")!))
     }
     
 
+    
+    
     /*
     // MARK: - Navigation
 

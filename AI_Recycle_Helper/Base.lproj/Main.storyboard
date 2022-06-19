@@ -518,27 +518,43 @@
         <!--Home-->
         <scene sceneID="wvi-14-Uoy">
             <objects>
-                <viewController id="Aml-5e-gre" customClass="HomeViewController" sceneMemberID="viewController">
+                <viewController id="Aml-5e-gre" customClass="HomeViewController" customModule="AI_Recycle_Helper" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QeB-S1-w6F">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZJT-sN-A3F">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="719"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hAK-oG-9XU">
+                                <rect key="frame" x="20" y="763" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="49H-yL-hWk"/>
+                                    <constraint firstAttribute="width" constant="50" id="qrC-sT-ayy"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="chevron.backward" catalog="system">
+                                    <backgroundConfiguration key="background"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="goToPrevious:" destination="Aml-5e-gre" eventType="touchUpInside" id="N6y-37-FZr"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eOE-JL-NuH"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="eOE-JL-NuH" firstAttribute="bottom" secondItem="ZJT-sN-A3F" secondAttribute="bottom" id="Tba-ZB-lZP"/>
-                            <constraint firstAttribute="trailing" secondItem="ZJT-sN-A3F" secondAttribute="trailing" id="boB-WL-cAq"/>
-                            <constraint firstItem="ZJT-sN-A3F" firstAttribute="top" secondItem="eOE-JL-NuH" secondAttribute="top" id="qMj-qg-8sX"/>
-                            <constraint firstItem="ZJT-sN-A3F" firstAttribute="leading" secondItem="QeB-S1-w6F" secondAttribute="leading" id="rcL-3r-e7D"/>
+                            <constraint firstItem="eOE-JL-NuH" firstAttribute="bottom" secondItem="hAK-oG-9XU" secondAttribute="bottom" id="2Va-lf-ICg"/>
+                            <constraint firstItem="ZJT-sN-A3F" firstAttribute="leading" secondItem="QeB-S1-w6F" secondAttribute="leading" id="ES5-xC-JNy"/>
+                            <constraint firstAttribute="trailing" secondItem="ZJT-sN-A3F" secondAttribute="trailing" id="UrQ-gj-1Lk"/>
+                            <constraint firstItem="hAK-oG-9XU" firstAttribute="top" secondItem="ZJT-sN-A3F" secondAttribute="bottom" id="X48-yH-TAP"/>
+                            <constraint firstItem="ZJT-sN-A3F" firstAttribute="top" secondItem="eOE-JL-NuH" secondAttribute="top" id="ou9-un-HKZ"/>
+                            <constraint firstItem="hAK-oG-9XU" firstAttribute="leading" secondItem="QeB-S1-w6F" secondAttribute="leadingMargin" id="xA7-8X-sO9"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="homekit" catalog="system" selectedImage="homekit" id="auV-4E-j9D"/>

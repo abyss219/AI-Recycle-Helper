@@ -19,15 +19,47 @@ class MainTabBarController: UITabBarController, UIImagePickerControllerDelegate,
  
     var classificationResults : [VNClassificationObservation] = []
  
-  
+    let button = UIButton.init(type: .custom)
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //self.delegate=self
         imagePicker2.delegate = self
          print("hey")
         // Do any additional setup after loading the view.
+        
+        
+        button.setTitle("Cam", for: .normal)
+        button.setTitleColor(.black, for: .normal)
+        button.setTitleColor(.yellow, for: .highlighted)
+        
+        button.backgroundColor = .orange
+        button.layer.cornerRadius = 32
+        button.layer.borderWidth = 4
+        button.layer.borderColor = UIColor.yellow.cgColor
+        
+        button.addTarget(self,
+                          action: #selector(cameraButtonisPress(_:)),
+                           for: .touchUpInside)
+        
+        self.view.insertSubview(button, aboveSubview: self.tabBar)
+        
     }
-    
+ 
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        // safe place to set the frame of button manually
+        button.frame = CGRect.init(x: self.tabBar.center.x - 32, y: self.view.bounds.height - 110, width: 64, height: 64)
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
    /*
     func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
         if viewController.tabBarItem.tag == 3 {
@@ -81,6 +113,8 @@ class MainTabBarController: UITabBarController, UIImagePickerControllerDelegate,
                 destinationVC.results = r
                 //print("The image2", UIimage)
                 destinationVC.theImage = UIimage
+                
+                
            }
     }
 
@@ -99,11 +133,32 @@ class MainTabBarController: UITabBarController, UIImagePickerControllerDelegate,
         }
         
     }
-
+    
+    
+    @IBAction func cameraButtonisPress(_ sender:UIButton){
+        openCamers()
+           // print("press")
+      
+    }
+    
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
             if item.tag == 1 {
-                openCamers()
+
+               // openCamers()
+                
+                
+//                let secondVC = storyboard?.instantiateViewController(identifier: "homeViewController") as! HomeViewController
+//
+//                        //secondVC.modalPresentationStyle = .fullScreen
+//                        //secondVC.modalTransitionStyle = .crossDissolve
+//                self.definesPresentationContext = true
+//                    secondVC.modalPresentationStyle = .currentContext
+//                        present(secondVC, animated: true, completion: nil)
+            
+                print(selectedIndex)
+                print("iam here")
             }
+        
           
     }
     

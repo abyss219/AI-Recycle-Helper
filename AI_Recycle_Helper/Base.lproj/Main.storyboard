@@ -491,7 +491,6 @@
                     <connections>
                         <segue destination="Sun-W7-HXn" kind="presentation" identifier="goToAIDetectResult" id="Dv9-ju-ueZ"/>
                         <segue destination="Aml-5e-gre" kind="relationship" relationship="viewControllers" id="aIp-YQ-2uT"/>
-                        <segue destination="78L-9F-GDX" kind="relationship" relationship="viewControllers" id="VsT-0f-S5u"/>
                         <segue destination="ObK-nt-4FB" kind="relationship" relationship="viewControllers" id="MPC-dc-UD2"/>
                     </connections>
                 </tabBarController>
@@ -518,7 +517,7 @@
         <!--Home-->
         <scene sceneID="wvi-14-Uoy">
             <objects>
-                <viewController id="Aml-5e-gre" customClass="HomeViewController" customModule="AI_Recycle_Helper" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="homeViewController" id="Aml-5e-gre" customClass="HomeViewController" customModule="AI_Recycle_Helper" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QeB-S1-w6F">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -32,15 +32,14 @@ class MainTabBarController: UITabBarController, UIImagePickerControllerDelegate,
         // Do any additional setup after loading the view.
         
         
-        button.setTitle("Cam", for: .normal)
-        button.setTitleColor(.black, for: .normal)
-        button.setTitleColor(.yellow, for: .highlighted)
-        
-        button.backgroundColor = .orange
-        button.layer.cornerRadius = 32
-        button.layer.borderWidth = 4
-        button.layer.borderColor = UIColor.yellow.cgColor
-        
+
+        button.backgroundColor = UIColor(red:176.0/255.0, green:176.0/255.0, blue:176.0/255.0, alpha: 1.0)
+        button.setImage(UIImage(named: "cameraImage"), for: .normal)
+        button.layer.cornerRadius = 27.5
+        //button.layer.borderWidth = 2
+        button.layer.borderColor = UIColor.black.cgColor
+        button.clipsToBounds = true
+        button.contentMode = .scaleAspectFill
         button.addTarget(self,
                           action: #selector(cameraButtonisPress(_:)),
                            for: .touchUpInside)
@@ -53,7 +52,10 @@ class MainTabBarController: UITabBarController, UIImagePickerControllerDelegate,
         super.viewDidLayoutSubviews()
         
         // safe place to set the frame of button manually
-        button.frame = CGRect.init(x: self.tabBar.center.x - 32, y: self.view.bounds.height - 110, width: 64, height: 64)
+        print(self.view.bounds.height)
+        
+        //self.tabBar.center.x - width/2
+        button.frame = CGRect.init(x: self.tabBar.center.x-27.5, y: self.view.bounds.height*(8/9), width: 55, height: 55)
     }
 
     override func didReceiveMemoryWarning() {

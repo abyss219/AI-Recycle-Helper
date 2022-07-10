@@ -201,24 +201,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="firstBaseline" translatesAutoresizingMaskIntoConstraints="NO" id="I94-c2-JjC" userLabel="topStackView">
-                                <rect key="frame" x="10" y="44" width="370" height="30"/>
+                                <rect key="frame" x="10" y="44" width="370" height="222"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H9t-We-wKz" userLabel="Question Number">
-                                        <rect key="frame" x="0.0" y="0.0" width="11.333333333333334" height="30"/>
+                                        <rect key="frame" x="0.0" y="192" width="11.333333333333334" height="30"/>
                                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EZR-P9-tco" userLabel="space">
-                                        <rect key="frame" x="11.333333333333343" y="0.0" width="296.33333333333326" height="20"/>
+                                        <rect key="frame" x="11.333333333333343" y="192" width="296.33333333333326" height="20"/>
                                         <color key="backgroundColor" systemColor="systemTealColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="Qq6-fU-MkM"/>
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Score" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9yv-oA-FvN">
-                                        <rect key="frame" x="307.66666666666669" y="0.0" width="62.333333333333314" height="30"/>
+                                        <rect key="frame" x="307.66666666666669" y="192" width="62.333333333333314" height="30"/>
                                         <color key="backgroundColor" systemColor="systemBrownColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <nil key="textColor"/>
@@ -226,17 +226,17 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="qAV-MT-mb8" userLabel="QuestionsStackView">
-                                <rect key="frame" x="19" y="132" width="374" height="161.33333333333334"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="qAV-MT-mb8" userLabel="QuestionsStackView">
+                                <rect key="frame" x="10" y="324" width="370" height="161.33333333333337"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MdN-H3-Dj4">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="20.333333333333332"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="370" height="20.333333333333332"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Qs-VH-xUF">
-                                        <rect key="frame" x="0.0" y="21.333333333333329" width="374" height="140"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3Qs-VH-xUF">
+                                        <rect key="frame" x="0.0" y="21.333333333333314" width="370" height="140"/>
                                     </imageView>
                                 </subviews>
                             </stackView>
@@ -345,9 +345,6 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lh0-PG-Trm" userLabel="space">
                                         <rect key="frame" x="63" y="0.0" width="284.66666666666669" height="32"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="20" id="RI3-Wq-JRt"/>
-                                        </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ISY-YW-37Y" userLabel="Next Question">
                                         <rect key="frame" x="348.66666666666669" y="0.0" width="21.333333333333314" height="32"/>
@@ -379,17 +376,22 @@
                         <viewLayoutGuide key="safeArea" id="ti3-le-new"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="qAV-MT-mb8" firstAttribute="leading" secondItem="ti3-le-new" secondAttribute="leading" constant="10" id="0TT-nx-z2v"/>
                             <constraint firstItem="FpZ-Ci-gZK" firstAttribute="leading" secondItem="ti3-le-new" secondAttribute="leading" constant="10" id="2ef-m2-mJp"/>
                             <constraint firstItem="ti3-le-new" firstAttribute="bottom" secondItem="tv3-Re-aXi" secondAttribute="bottom" constant="10" id="5Uh-A2-s9S"/>
+                            <constraint firstItem="FpZ-Ci-gZK" firstAttribute="top" secondItem="qAV-MT-mb8" secondAttribute="bottom" constant="10" id="7GC-Tb-3tn"/>
                             <constraint firstItem="ti3-le-new" firstAttribute="trailing" secondItem="I94-c2-JjC" secondAttribute="trailing" constant="10" id="Fjb-tf-vXz"/>
                             <constraint firstItem="ti3-le-new" firstAttribute="trailing" secondItem="tv3-Re-aXi" secondAttribute="trailing" id="Gfm-xQ-jSY"/>
                             <constraint firstItem="ti3-le-new" firstAttribute="trailing" secondItem="NcU-AD-ucl" secondAttribute="trailing" constant="10" id="Lc3-Vp-1f6"/>
                             <constraint firstItem="I94-c2-JjC" firstAttribute="leading" secondItem="ti3-le-new" secondAttribute="leading" constant="10" id="Lmv-gX-HRW"/>
+                            <constraint firstItem="qAV-MT-mb8" firstAttribute="top" secondItem="I94-c2-JjC" secondAttribute="bottom" constant="58" id="TBi-Xf-Feb"/>
                             <constraint firstItem="NcU-AD-ucl" firstAttribute="top" secondItem="FpZ-Ci-gZK" secondAttribute="bottom" constant="10" id="Yhy-K4-vWs"/>
                             <constraint firstItem="I94-c2-JjC" firstAttribute="top" secondItem="ti3-le-new" secondAttribute="top" id="bab-yQ-89m"/>
                             <constraint firstItem="tv3-Re-aXi" firstAttribute="leading" secondItem="ti3-le-new" secondAttribute="leading" id="cZu-XD-Z7Q"/>
                             <constraint firstItem="NcU-AD-ucl" firstAttribute="leading" secondItem="ti3-le-new" secondAttribute="leading" constant="10" id="fRW-EE-cI7"/>
                             <constraint firstItem="ti3-le-new" firstAttribute="trailing" secondItem="FpZ-Ci-gZK" secondAttribute="trailing" constant="10" id="fYQ-uj-az6"/>
+                            <constraint firstItem="I94-c2-JjC" firstAttribute="top" secondItem="ti3-le-new" secondAttribute="top" id="lv7-vm-w0J"/>
+                            <constraint firstItem="ti3-le-new" firstAttribute="trailing" secondItem="qAV-MT-mb8" secondAttribute="trailing" constant="10" id="nkb-kJ-mGN"/>
                             <constraint firstItem="tv3-Re-aXi" firstAttribute="top" secondItem="NcU-AD-ucl" secondAttribute="bottom" constant="10" id="xqA-Wj-yZN"/>
                         </constraints>
                     </view>
@@ -412,7 +414,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0zE-O7-M8X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="18.22429906542056" y="922.67818574514047"/>
+            <point key="canvasLocation" x="16.923076923076923" y="922.03791469194312"/>
         </scene>
         <!--finishQuizScene-->
         <scene sceneID="Xy5-TM-IxA">

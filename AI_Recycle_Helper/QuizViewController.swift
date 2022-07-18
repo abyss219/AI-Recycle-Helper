@@ -153,7 +153,7 @@ class QuizViewController: UIViewController {
             buttonList[i]?.layer.cornerRadius=14
         }
         for index in 0...(questionsOption.count-1){
-             buttonList[5-questionsOption.count+index]?.setTitle(questionsOption[index], for: .normal);
+            buttonList[5-questionsOption.count+index]?.setTitle(questionsOption[index], for: .normal);
             buttonList[5-questionsOption.count+index]?.isEnabled=true;
             buttonList[5-questionsOption.count+index]?.alpha=1
         }

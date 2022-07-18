@@ -76,7 +76,7 @@ class MainTabBarController: UITabBarController, UIImagePickerControllerDelegate,
     func detect(image: CIImage) {
         print("decting...............")
         // Load the ML model through its generated class
-        guard let model = try? VNCoreMLModel(for: AIDetect2().model) else {
+        guard let model = try? VNCoreMLModel(for: AIDetectModel().model) else {
             fatalError("can't load ML model")
         }
  

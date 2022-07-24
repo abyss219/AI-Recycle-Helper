@@ -108,19 +108,23 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eEc-Yn-43R">
                                 <rect key="frame" x="20" y="64" width="350" height="395"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="270" translatesAutoresizingMaskIntoConstraints="NO" id="BRN-i5-GdL">
-                                <rect key="frame" x="23" y="740" width="344" height="50"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="BRN-i5-GdL">
+                                <rect key="frame" x="20" y="740" width="350" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JYO-c8-RFc" userLabel="Last Result">
-                                        <rect key="frame" x="0.0" y="0.0" width="37" height="50"/>
+                                        <rect key="frame" x="0.0" y="9.6666666666666305" width="37" height="30.666666666666671"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="chevron.backward" catalog="system" title=""/>
                                         <connections>
                                             <action selector="lastButtonIsPressed:" destination="Sun-W7-HXn" eventType="touchUpInside" id="ef3-HY-g3z"/>
                                         </connections>
                                     </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rUn-yE-qkY">
+                                        <rect key="frame" x="58" y="0.0" width="234" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                    </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Za1-QU-XrO" userLabel="Next Result">
-                                        <rect key="frame" x="307" y="0.0" width="37" height="50"/>
+                                        <rect key="frame" x="313" y="9.6666666666666305" width="37" height="30.666666666666671"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="chevron.forward" catalog="system" title=""/>
                                         <connections>
@@ -129,6 +133,7 @@
                                     </button>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="rUn-yE-qkY" firstAttribute="top" secondItem="BRN-i5-GdL" secondAttribute="topMargin" id="pEz-zx-Lzg"/>
                                     <constraint firstAttribute="height" constant="50" id="wpV-ef-kVH"/>
                                 </constraints>
                             </stackView>
@@ -151,7 +156,9 @@
                             <constraint firstItem="eEc-Yn-43R" firstAttribute="top" secondItem="CCg-f3-dnS" secondAttribute="top" constant="20" id="Eeu-NV-pyg"/>
                             <constraint firstItem="fY5-II-Oo1" firstAttribute="top" secondItem="eEc-Yn-43R" secondAttribute="bottom" constant="53" id="Gns-Cu-iOl"/>
                             <constraint firstItem="eEc-Yn-43R" firstAttribute="height" secondItem="Yb2-dH-Hjt" secondAttribute="height" multiplier="0.5" id="SMA-oV-aVr"/>
-                            <constraint firstItem="BRN-i5-GdL" firstAttribute="centerX" secondItem="Yb2-dH-Hjt" secondAttribute="centerX" id="t0D-2v-7qS"/>
+                            <constraint firstItem="CCg-f3-dnS" firstAttribute="trailing" secondItem="BRN-i5-GdL" secondAttribute="trailing" constant="20" id="Y14-8U-LLu"/>
+                            <constraint firstItem="BRN-i5-GdL" firstAttribute="leading" secondItem="CCg-f3-dnS" secondAttribute="leading" constant="20" id="cFo-Wl-ntY"/>
+                            <constraint firstItem="rUn-yE-qkY" firstAttribute="width" secondItem="Yb2-dH-Hjt" secondAttribute="width" multiplier="0.6" id="skp-gj-5Ux"/>
                             <constraint firstItem="CCg-f3-dnS" firstAttribute="bottom" secondItem="BRN-i5-GdL" secondAttribute="bottom" id="ub0-wc-aA2"/>
                             <constraint firstItem="CCg-f3-dnS" firstAttribute="trailing" secondItem="fY5-II-Oo1" secondAttribute="trailing" id="xfw-DH-Zhr"/>
                             <constraint firstItem="fY5-II-Oo1" firstAttribute="leading" secondItem="CCg-f3-dnS" secondAttribute="leading" id="ybq-Bm-g1a"/>

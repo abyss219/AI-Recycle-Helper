@@ -9,6 +9,8 @@ import UIKit
 import WebKit
 class HomeViewController: UIViewController,WKUIDelegate {
 
+    @IBOutlet weak var lastPageButton: UIButton!
+    
     @IBOutlet weak var webPage: WKWebView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +26,11 @@ class HomeViewController: UIViewController,WKUIDelegate {
         }
     }
     
+    @IBAction func goToNext(_ sender: Any) {
+        if (webPage.canGoForward){
+            webPage.goForward()
+        }
+    }
     func webView(_ webView: WKWebView, createWebViewWith configuration: WKWebViewConfiguration, for navigationAction: WKNavigationAction, windowFeatures: WKWindowFeatures) -> WKWebView? {
             if let frame = navigationAction.targetFrame,
                 frame.isMainFrame {

@@ -7,7 +7,7 @@
 
 import UIKit
 import WebKit
-class HomeViewController: UIViewController,WKUIDelegate {
+class HomeViewController: UIViewController,WKUIDelegate, WKNavigationDelegate {
 
     @IBOutlet weak var lastPageButton: UIButton!
     
@@ -20,7 +20,7 @@ class HomeViewController: UIViewController,WKUIDelegate {
         //let myURL = URL(string:"https://recyclebc.ca/category/education/")
         webPage.load(URLRequest(url:URL(string:"https://recyclebc.ca/category/education/")!))
         webPage.uiDelegate = self
-
+        webPage.navigationDelegate = self
     }
     
 
@@ -57,7 +57,20 @@ class HomeViewController: UIViewController,WKUIDelegate {
         
         }
     
-
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) { // triggers when loading is complete
+        if (webView.canGoForward){
+            nextPageButton.tintColor=UIColor(red: 151/255, green: 202/255, blue: 86/255, alpha: 1.0)
+        }else{
+            nextPageButton.tintColor=UIColor(red: 142/255, green: 142/255, blue: 148/255, alpha: 1.0)
+        }
+        
+        if (webView.canGoBack){
+            lastPageButton.tintColor=UIColor(red: 151/255, green: 202/255, blue: 86/255, alpha: 1.0)
+        }
+        else{
+            lastPageButton.tintColor=UIColor(red: 142/255, green: 142/255, blue: 148/255, alpha: 1.0)
+        }
+        }
 
     /*
     // MARK: - Navigation

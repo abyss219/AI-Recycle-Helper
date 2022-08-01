@@ -11,12 +11,16 @@ class HomeViewController: UIViewController,WKUIDelegate {
 
     @IBOutlet weak var lastPageButton: UIButton!
     
+    @IBOutlet weak var nextPageButton: UIButton!
+    @IBOutlet weak var homePageButton: UIButton!
+    
     @IBOutlet weak var webPage: WKWebView!
     override func viewDidLoad() {
         super.viewDidLoad()
         //let myURL = URL(string:"https://recyclebc.ca/category/education/")
         webPage.load(URLRequest(url:URL(string:"https://recyclebc.ca/category/education/")!))
         webPage.uiDelegate = self
+
     }
     
 
@@ -24,22 +28,37 @@ class HomeViewController: UIViewController,WKUIDelegate {
         if (webPage.canGoBack){
             webPage.goBack()
         }
+
+        
     }
     
     @IBAction func goToNext(_ sender: Any) {
         if (webPage.canGoForward){
             webPage.goForward()
         }
+
     }
+
+
+    @IBAction func homeButton(_ sender: UIButton) {
+        viewDidLoad()
+    }
+    
+    
     func webView(_ webView: WKWebView, createWebViewWith configuration: WKWebViewConfiguration, for navigationAction: WKNavigationAction, windowFeatures: WKWindowFeatures) -> WKWebView? {
+        
+        
             if let frame = navigationAction.targetFrame,
                 frame.isMainFrame {
                 return nil
             }
             webView.load(navigationAction.request)
             return nil
+        
         }
     
+
+
     /*
     // MARK: - Navigation
 
@@ -50,4 +69,7 @@ class HomeViewController: UIViewController,WKUIDelegate {
     }
     */
 
+    
+    
+    
 }

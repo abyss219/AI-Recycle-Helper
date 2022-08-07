@@ -78,7 +78,7 @@ class QuizViewController: UIViewController {
             goToNext = false
         }else{
             var x = quiz.checkAns(userAnswer:userSelectList);
-            
+            scoreLabel.text = ("score: "+String(quiz.getScore()))
             if (!x){
                 hintButton.alpha=1
                 hintButton.isEnabled=true
@@ -127,7 +127,7 @@ class QuizViewController: UIViewController {
         
         hintButton.alpha=0
         hintButton.isEnabled=false
-        scoreLabel.text = ("score: "+String(quiz.getScore()))
+        //scoreLabel.text = ("score: "+String(quiz.getScore()))
         
         progressBar.progress=Float(quiz.usedQuestion.count)/10.0;
        

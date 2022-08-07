@@ -77,7 +77,7 @@ class AIViewController: UIViewController{
         }
         else{
             resultText.text = "Trash: "+results[index]
-            resultText.textColor = UIColor.black
+            resultText.textColor = UIColor.label
         }
 
 

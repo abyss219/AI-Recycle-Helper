@@ -67,11 +67,6 @@ class QuizViewController: UIViewController {
     var goToNext = false;
     @IBAction func answerButtonIsPressed(_ sender: UIButton) {
         
-
-        
-        
-        
-        
         let buttonList=[self.b1,self.b2,self.b3,self.b4,self.b5];
         if (goToNext){
             updateUI();
@@ -88,15 +83,15 @@ class QuizViewController: UIViewController {
             for i in 0...(myquestion.options.count-1){
                 if myquestion.answers.contains(i) && userSelectList.contains(myquestion.options[i]){
                     //green
-                    buttonList[5-myquestion.options.count+i]?.backgroundColor=UIColor(red: 227/255, green: 253/255, blue: 253/255, alpha: 1.0)
+                    buttonList[i]?.backgroundColor=UIColor(red: 227/255, green: 253/255, blue: 253/255, alpha: 1.0)
                     buttonList[5-myquestion.options.count+i]?.layer.cornerRadius=14
                     
                 }else if (!myquestion.answers.contains(i) && !userSelectList.contains(myquestion.options[i])){
-                    buttonList[5-myquestion.options.count+i]?.backgroundColor=UIColor.clear
-                    buttonList[5-myquestion.options.count+i]?.layer.cornerRadius=14
+                    buttonList[i]?.backgroundColor=UIColor.clear
+                    buttonList[i]?.layer.cornerRadius=14
                 }else{
-                    buttonList[5-myquestion.options.count+i]?.backgroundColor=UIColor(red: 255/255, green: 226/255, blue: 226/255, alpha: 1.0)
-                    buttonList[5-myquestion.options.count+i]?.layer.cornerRadius=14
+                    buttonList[i]?.backgroundColor=UIColor(red: 255/255, green: 226/255, blue: 226/255, alpha: 1.0)
+                    buttonList[i]?.layer.cornerRadius=14
                 }
    
             }
@@ -144,7 +139,7 @@ class QuizViewController: UIViewController {
         }else{
             questionImage?.image=nil;
         }
-        
+        /*
         for i in 0...4{
             buttonList[i]?.setTitle(" ", for: .normal);
             buttonList[i]?.isEnabled=false;
@@ -152,10 +147,30 @@ class QuizViewController: UIViewController {
             buttonList[i]?.backgroundColor=UIColor.clear;
             buttonList[i]?.layer.cornerRadius=14
         }
+        */
+        for i in 0...4{
+            //buttonList[i]?.removeFromSuperview()
+            //buttonList[i]?.alpha=0
+            buttonList[i]?.isEnabled=false;
+            buttonList[i]?.backgroundColor=UIColor.clear;
+            buttonList[i]?.isHidden=true;
+        }
+        
+        
+        /*
         for index in 0...(questionsOption.count-1){
             buttonList[5-questionsOption.count+index]?.setTitle(questionsOption[index], for: .normal);
             buttonList[5-questionsOption.count+index]?.isEnabled=true;
             buttonList[5-questionsOption.count+index]?.alpha=1
+        }
+        */
+        for index in 0...(questionsOption.count-1){
+           
+            buttonList[index]?.setTitle(questionsOption[index], for: .normal);
+            buttonList[index]?.isEnabled=true;
+            buttonList[index]?.alpha=1
+            buttonList[index]?.isHidden=false;
+            //self.view.addSubview(buttonList[index]?)
         }
         
     }

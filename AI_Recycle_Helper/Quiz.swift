@@ -28,11 +28,13 @@ struct Quiz{
         Question(questionText: "Greasy cardboard goes in which cart?", options: ["Trash cart","Recycling Cart"], answers: [0], hasImage: true,hint: "1"),
         Question(questionText: "True or False: Shredded paper can be recycled.", options: ["TRUE","FALSE"], answers: [0], hasImage: true,hint: "1"),
         Question(questionText: "Shampoo and lotion bottles go in which cart?", options: ["Trash Cart","Recycling Cart"], answers: [1], hasImage: true,hint: "1"),
-        Question(questionText: "Wrapping paper goes in which cart?", options: ["Trash cart","Recycle cart"], answers: [1], hasImage: true,hint: "1"),
-        Question(questionText: "Cartons go in which cçart?", options: ["Trash Cart","Recycling Cart"], answers: [1], hasImage: false, hint: "1"),
-        Question(questionText: "Disposable coffee cups go in which cart?", options: ["Trash Cart","Recycling Cart"], answers: [0], hasImage: false, hint: ""),
-        Question(questionText: "Plastic buckets go in which cart?", options: ["Trash Cart","Recycling Cart"], answers: [0], hasImage: false, hint: ""),
-        Question(questionText: "Plastic bags are not accepted in the recycling bin.", options: ["TRUE","FALSE"], answers: [0], hasImage: false, hint: ""),
+        Question(questionText: "Should Wrapping paper (foil) be placed in recycling bin?", options: ["Yes","No"], answers: [1], hasImage: true,hint: "This item is not acceptable for the recycle bin. It may be acceptable in your community's recycling or collection programme."),
+        
+        
+        Question(questionText: "Gable-top cartons go in which cart?", options: ["Trash Cart","Recycling Cart"], answers: [1], hasImage: false, hint: "This item can go in your container recycling if you receive curbside recycling collection."),
+        Question(questionText: "Disposable coffee cups go in which cart?", options: ["Trash Cart","Recycling Cart"], answers: [0], hasImage: false, hint: "This item can go in your container recycling if you receive curbside recycling collection."),
+        Question(questionText: "Where can I recycle my empty bags and plastic containers for garden chemicals and fertilizers?", options: ["Trash Cart","Recycling Cart"], answers: [1], hasImage: false, hint: "Plastic pails or buckets for fertilizers, road salt, soil, and other garden products are included in a provincial recycling program through Recycle BC. Once these containers are empty and rinsed, they can be placed in many curbside recycling programs across the province. This includes all containers that are 25 litres or less in size."),
+        Question(questionText: "Plastic bags are not accepted in the recycling bin.", options: ["TRUE","FALSE"], answers: [0], hasImage: false, hint: "Plastic bags and some plastic wraps are recyclable"),
         Question(questionText: "Lids & caps should be removed before recycling.", options: ["TRUE","FALSE"], answers: [0], hasImage: false, hint: "Most lids are constructed of a different sort of plastic than the containers. They often have a greater melting point and may disturb the whole batch of plastic that is being recycled. Always remove the lid from any plastic containers before recycling.")
     ]
 

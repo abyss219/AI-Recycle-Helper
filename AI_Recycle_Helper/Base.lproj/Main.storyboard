@@ -249,7 +249,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="370" height="57.666666666666664"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="n/a">
-                                                    <backgroundConfiguration key="background" cornerRadius="14" strokeWidth="2">
+                                                    <backgroundConfiguration key="background" cornerRadius="50" strokeWidth="2">
                                                         <color key="strokeColor" name="ButtonBorderColor"/>
                                                     </backgroundConfiguration>
                                                     <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
@@ -262,7 +262,7 @@
                                                 <rect key="frame" x="0.0" y="60.666666666666686" width="370" height="57.333333333333343"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="False">
-                                                    <backgroundConfiguration key="background" cornerRadius="14" strokeWidth="2">
+                                                    <backgroundConfiguration key="background" cornerRadius="50" strokeWidth="2">
                                                         <color key="strokeColor" name="ButtonBorderColor"/>
                                                     </backgroundConfiguration>
                                                     <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
@@ -275,7 +275,7 @@
                                                 <rect key="frame" x="0.0" y="121.00000000000007" width="370" height="57.666666666666671"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Button">
-                                                    <backgroundConfiguration key="background" cornerRadius="14" strokeWidth="2">
+                                                    <backgroundConfiguration key="background" cornerRadius="50" strokeWidth="2">
                                                         <color key="strokeColor" name="ButtonBorderColor"/>
                                                     </backgroundConfiguration>
                                                     <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
@@ -288,7 +288,7 @@
                                                 <rect key="frame" x="0.0" y="181.66666666666669" width="370" height="57.333333333333343"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Button">
-                                                    <backgroundConfiguration key="background" cornerRadius="14" strokeWidth="2">
+                                                    <backgroundConfiguration key="background" cornerRadius="50" strokeWidth="2">
                                                         <color key="strokeColor" name="ButtonBorderColor"/>
                                                     </backgroundConfiguration>
                                                     <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
@@ -301,7 +301,7 @@
                                                 <rect key="frame" x="0.0" y="242.00000000000003" width="370" height="57.666666666666657"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Button">
-                                                    <backgroundConfiguration key="background" cornerRadius="14" strokeWidth="2">
+                                                    <backgroundConfiguration key="background" cornerRadius="50" strokeWidth="2">
                                                         <color key="strokeColor" name="ButtonBorderColor"/>
                                                     </backgroundConfiguration>
                                                     <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>

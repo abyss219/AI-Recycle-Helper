@@ -9,6 +9,8 @@ import UIKit
 
 class QuizViewController: UIViewController {
 
+   var timer=Timer()
+    
     @IBOutlet weak var questionText: UILabel!
     
     @IBOutlet weak var questionImage: UIImageView?
@@ -63,13 +65,23 @@ class QuizViewController: UIViewController {
         
     }
     
-    
+
     var goToNext = false;
     @IBAction func answerButtonIsPressed(_ sender: UIButton) {
         
         let buttonList=[self.b1,self.b2,self.b3,self.b4,self.b5];
         if (goToNext){
-            updateUI();
+            if (quiz.usedQuestion.count==10){
+                performSegue(withIdentifier: "goToFinishView", sender: self)
+                quiz.score = 0
+                quiz.usedQuestion=[];
+                timer = Timer.scheduledTimer(timeInterval: 1.0, target:self, selector: #selector(countTime), userInfo:nil, repeats: true)
+                updateUI();
+
+      
+            }else{
+                updateUI();
+            }
             goToNext = false
         }else{
             var x = quiz.checkAns(userAnswer:userSelectList);
@@ -84,14 +96,13 @@ class QuizViewController: UIViewController {
                 if myquestion.answers.contains(i) && userSelectList.contains(myquestion.options[i]){
                     //green
                     buttonList[i]?.backgroundColor=UIColor(red: 227/255, green: 253/255, blue: 253/255, alpha: 1.0)
-                    buttonList[5-myquestion.options.count+i]?.layer.cornerRadius=14
-                    
+                    buttonList[5-myquestion.options.count+i]?.layer.cornerRadius=35
                 }else if (!myquestion.answers.contains(i) && !userSelectList.contains(myquestion.options[i])){
                     buttonList[i]?.backgroundColor=UIColor.clear
-                    buttonList[i]?.layer.cornerRadius=14
+                    buttonList[i]?.layer.cornerRadius=35
                 }else{
                     buttonList[i]?.backgroundColor=UIColor(red: 255/255, green: 226/255, blue: 226/255, alpha: 1.0)
-                    buttonList[i]?.layer.cornerRadius=14
+                    buttonList[i]?.layer.cornerRadius=35
                 }
    
             }
@@ -101,8 +112,13 @@ class QuizViewController: UIViewController {
         }
     }
     
-    
-
+    var totaltime=3
+    @objc func countTime(){
+        var start = 0;
+        if start<totaltime{
+            start+=1
+        }
+    }
     
  
     
@@ -117,9 +133,8 @@ class QuizViewController: UIViewController {
             }
     }
     func updateUI(){
-        checkFinishView();
-        
-        
+
+
         hintButton.alpha=0
         hintButton.isEnabled=false
         //scoreLabel.text = ("score: "+String(quiz.getScore()))
@@ -176,13 +191,34 @@ class QuizViewController: UIViewController {
     }
     
     
+    /*
+    var runCount = 0
+
+    Timer.scheduledTimer(withTimeInterval: 1.0, #selector(fireTime) repeats: true) { timer in
+        runCount += 1
+        print("timer")
+        if runCount == 3 {
+            timer.invalidate()
+        }
+    }
+    
+    
+    */
+    
+    
+    
+    
+    /*
+    
     func checkFinishView(){
         if (quiz.usedQuestion.count==10){
             performSegue(withIdentifier: "goToFinishView", sender: self)
             quiz.score = 0
             quiz.usedQuestion=[];
+  
         }
     }
+     */
     
     //Anamation
     @IBAction func userSelect(_ sender: UIButton) {

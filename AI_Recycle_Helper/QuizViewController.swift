@@ -8,8 +8,6 @@
 import UIKit
 
 class QuizViewController: UIViewController {
-
-   var timer=Timer()
     
     @IBOutlet weak var questionText: UILabel!
     
@@ -55,6 +53,7 @@ class QuizViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad();
         updateUI()
+        questionText.text="hello"
         //questionImage!.image=#imageLiteral(resourceName: "Q1")
             
         // Do any additional setup after loading the view.
@@ -75,7 +74,7 @@ class QuizViewController: UIViewController {
                 performSegue(withIdentifier: "goToFinishView", sender: self)
                 quiz.score = 0
                 quiz.usedQuestion=[];
-                timer = Timer.scheduledTimer(timeInterval: 1.0, target:self, selector: #selector(countTime), userInfo:nil, repeats: true)
+       
                 updateUI();
 
       
@@ -112,14 +111,6 @@ class QuizViewController: UIViewController {
         }
     }
     
-    var totaltime=3
-    @objc func countTime(){
-        var start = 0;
-        if start<totaltime{
-            start+=1
-        }
-    }
-    
  
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -142,17 +133,19 @@ class QuizViewController: UIViewController {
         progressBar.progress=Float(quiz.usedQuestion.count)/10.0;
        
         questionNumberLabel.text=("Question "+String(quiz.usedQuestion.count+1))
-
         //print(quiz.getScore())
         userSelectList = [];
         quiz.getQuestion();
+        questionText.text = "hi"
         questionText.text = quiz.getQuestionText();
+        print("question:"+questionText.text!)
         let questionsOption = quiz.questions[quiz.currentQustionNum].options;
         let buttonList=[self.b1,self.b2,self.b3,self.b4,self.b5];
         if (quiz.questions[quiz.currentQustionNum].hasImage == true){
             questionImage!.image=#imageLiteral(resourceName: "Q"+String(quiz.currentQustionNum))
         }else{
             questionImage?.image=nil;
+            
         }
         /*
         for i in 0...4{
@@ -169,6 +162,8 @@ class QuizViewController: UIViewController {
             buttonList[i]?.isEnabled=false;
             buttonList[i]?.backgroundColor=UIColor.clear;
             buttonList[i]?.isHidden=true;
+            buttonList[i]?.layer.cornerRadius=35
+            
         }
         
         
@@ -186,6 +181,7 @@ class QuizViewController: UIViewController {
             buttonList[index]?.alpha=1
             buttonList[index]?.isHidden=false;
             //self.view.addSubview(buttonList[index]?)
+            buttonList[index]?.layer.cornerRadius=35
         }
         
     }

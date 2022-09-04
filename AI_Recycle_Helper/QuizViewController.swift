@@ -53,7 +53,6 @@ class QuizViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad();
         updateUI()
-        questionText.text="hello"
         //questionImage!.image=#imageLiteral(resourceName: "Q1")
             
         // Do any additional setup after loading the view.
@@ -124,66 +123,38 @@ class QuizViewController: UIViewController {
             }
     }
     func updateUI(){
-
-
+        checkFinishView();
         hintButton.alpha=0
         hintButton.isEnabled=false
-        //scoreLabel.text = ("score: "+String(quiz.getScore()))
-        
         progressBar.progress=Float(quiz.usedQuestion.count)/10.0;
-       
         questionNumberLabel.text=("Question "+String(quiz.usedQuestion.count+1))
-        //print(quiz.getScore())
         userSelectList = [];
         quiz.getQuestion();
-        questionText.text = "hi"
         questionText.text = quiz.getQuestionText();
-        print("question:"+questionText.text!)
         let questionsOption = quiz.questions[quiz.currentQustionNum].options;
         let buttonList=[self.b1,self.b2,self.b3,self.b4,self.b5];
         if (quiz.questions[quiz.currentQustionNum].hasImage == true){
-            questionImage!.image=#imageLiteral(resourceName: "Q"+String(quiz.currentQustionNum))
+            questionImage!.image = #imageLiteral(resourceName: "Q"+String(quiz.currentQustionNum))
         }else{
             questionImage?.image=nil;
-            
         }
-        /*
+ 
         for i in 0...4{
-            buttonList[i]?.setTitle(" ", for: .normal);
-            buttonList[i]?.isEnabled=false;
-            buttonList[i]?.alpha=0;
-            buttonList[i]?.backgroundColor=UIColor.clear;
-            buttonList[i]?.layer.cornerRadius=14
-        }
-        */
-        for i in 0...4{
-            //buttonList[i]?.removeFromSuperview()
-            //buttonList[i]?.alpha=0
+       
             buttonList[i]?.isEnabled=false;
             buttonList[i]?.backgroundColor=UIColor.clear;
             buttonList[i]?.isHidden=true;
-            buttonList[i]?.layer.cornerRadius=35
-            
         }
-        
-        
-        /*
-        for index in 0...(questionsOption.count-1){
-            buttonList[5-questionsOption.count+index]?.setTitle(questionsOption[index], for: .normal);
-            buttonList[5-questionsOption.count+index]?.isEnabled=true;
-            buttonList[5-questionsOption.count+index]?.alpha=1
-        }
-        */
         for index in 0...(questionsOption.count-1){
            
             buttonList[index]?.setTitle(questionsOption[index], for: .normal);
             buttonList[index]?.isEnabled=true;
             buttonList[index]?.alpha=1
             buttonList[index]?.isHidden=false;
-            //self.view.addSubview(buttonList[index]?)
             buttonList[index]?.layer.cornerRadius=35
+   
         }
-        
+        questionText.text = quiz.getQuestionText();
     }
     
     
@@ -204,7 +175,7 @@ class QuizViewController: UIViewController {
     
     
     
-    /*
+    
     
     func checkFinishView(){
         if (quiz.usedQuestion.count==10){
@@ -214,7 +185,7 @@ class QuizViewController: UIViewController {
   
         }
     }
-     */
+    
     
     //Anamation
     @IBAction func userSelect(_ sender: UIButton) {

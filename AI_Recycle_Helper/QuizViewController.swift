@@ -93,13 +93,13 @@ class QuizViewController: UIViewController {
             for i in 0...(myquestion.options.count-1){
                 if myquestion.answers.contains(i) && userSelectList.contains(myquestion.options[i]){
                     //green
-                    buttonList[i]?.backgroundColor=UIColor(red: 227/255, green: 253/255, blue: 253/255, alpha: 1.0)
+                    buttonList[i]?.backgroundColor=UIColor(named:"quizButtonCorrectColor")
                     buttonList[5-myquestion.options.count+i]?.layer.cornerRadius=35
                 }else if (!myquestion.answers.contains(i) && !userSelectList.contains(myquestion.options[i])){
-                    buttonList[i]?.backgroundColor=UIColor.clear
+                    //buttonList[i]?.backgroundColor=UIColor.clear
                     buttonList[i]?.layer.cornerRadius=35
                 }else{
-                    buttonList[i]?.backgroundColor=UIColor(red: 255/255, green: 226/255, blue: 226/255, alpha: 1.0)
+                    buttonList[i]?.backgroundColor=UIColor(named:"quizButtonWrongColor")
                     buttonList[i]?.layer.cornerRadius=35
                 }
    
@@ -127,7 +127,7 @@ class QuizViewController: UIViewController {
         hintButton.alpha=0
         hintButton.isEnabled=false
         progressBar.progress=Float(quiz.usedQuestion.count)/10.0;
-        questionNumberLabel.text=("Question "+String(quiz.usedQuestion.count+1))
+        questionNumberLabel.text=("Question "+String(quiz.usedQuestion.count+1)+"/10")
         userSelectList = [];
         quiz.getQuestion();
         questionText.text = quiz.getQuestionText();
@@ -142,7 +142,8 @@ class QuizViewController: UIViewController {
         for i in 0...4{
        
             buttonList[i]?.isEnabled=false;
-            buttonList[i]?.backgroundColor=UIColor.clear;
+            buttonList[i]?.backgroundColor=UIColor(named: "quizDefaultButtonColor");
+            // buttonList[i]?.setTitleColor(Rever, for:.normal)
             buttonList[i]?.isHidden=true;
         }
         for index in 0...(questionsOption.count-1){
@@ -192,11 +193,13 @@ class QuizViewController: UIViewController {
         if (!goToNext){
             if userSelectList.contains(sender.currentTitle!){
                 userSelectList=userSelectList.filter(){$0 != sender.currentTitle!}
-                sender.backgroundColor=UIColor.clear
+                sender.backgroundColor=UIColor(named:"quizDefaultButtonColor")
             }else{
                 if(userSelectList.count < quiz.questions[quiz.currentQustionNum].answers.count){
                     userSelectList.append(sender.currentTitle!)
-                    sender.backgroundColor=UIColor(red: 134/255, green: 198/255, blue: 244/255, alpha: 1.0)
+                    sender.backgroundColor=UIColor(named: "quizButtonSelectColor")
+                    //sender.setTitleColor(UIColor(red: 255/255, green: 0/255, blue: 0/255, alpha: 1.0),for:.normal)
+                    
                 }
 
             }

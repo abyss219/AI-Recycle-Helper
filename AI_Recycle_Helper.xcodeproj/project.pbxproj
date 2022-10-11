@@ -24,6 +24,8 @@
 		948EF7B627D541250006DA7F /* FinishQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948EF7B527D541250006DA7F /* FinishQuizViewController.swift */; };
 		94A4A98427FA175F0073390C /* AIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A4A98327FA175F0073390C /* AIViewController.swift */; };
 		94CF151427B9948D008008DC /* HintViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CF151327B9948D008008DC /* HintViewController.swift */; };
+		94DC670928F3D5A8002F5B32 /* PdfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DC670828F3D5A8002F5B32 /* PdfViewController.swift */; };
+		94DC670B28F3D8CF002F5B32 /* Garbage Disposal.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 94DC670A28F3D8CF002F5B32 /* Garbage Disposal.pdf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,8 @@
 		948EF7B527D541250006DA7F /* FinishQuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishQuizViewController.swift; sourceTree = "<group>"; };
 		94A4A98327FA175F0073390C /* AIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIViewController.swift; sourceTree = "<group>"; };
 		94CF151327B9948D008008DC /* HintViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintViewController.swift; sourceTree = "<group>"; };
+		94DC670828F3D5A8002F5B32 /* PdfViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PdfViewController.swift; sourceTree = "<group>"; };
+		94DC670A28F3D8CF002F5B32 /* Garbage Disposal.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Garbage Disposal.pdf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,12 +119,14 @@
 		940F1B532765695F002802D7 /* AI_Recycle_Helper */ = {
 			isa = PBXGroup;
 			children = (
+				94DC670A28F3D8CF002F5B32 /* Garbage Disposal.pdf */,
 				940F1B542765695F002802D7 /* AppDelegate.swift */,
 				940F1B562765695F002802D7 /* SceneDelegate.swift */,
 				947396FE278BB2530059F015 /* HomeViewController.swift */,
 				947396FC278BB1880059F015 /* QuizViewController.swift */,
 				94A4A98327FA175F0073390C /* AIViewController.swift */,
 				940F1B5A2765695F002802D7 /* Main.storyboard */,
+				94DC670828F3D5A8002F5B32 /* PdfViewController.swift */,
 				940F1B5D27656960002802D7 /* Assets.xcassets */,
 				940F1B5F27656960002802D7 /* LaunchScreen.storyboard */,
 				948A09112884DE7100CA0A5B /* AIDetectModel.mlmodel */,
@@ -255,6 +261,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94DC670B28F3D8CF002F5B32 /* Garbage Disposal.pdf in Resources */,
 				940F1B6127656960002802D7 /* LaunchScreen.storyboard in Resources */,
 				940F1B5E27656960002802D7 /* Assets.xcassets in Resources */,
 				940F1B5C2765695F002802D7 /* Main.storyboard in Resources */,
@@ -293,6 +300,7 @@
 				94A4A98427FA175F0073390C /* AIViewController.swift in Sources */,
 				948A09122884DE7100CA0A5B /* AIDetectModel.mlmodel in Sources */,
 				947396FF278BB2530059F015 /* HomeViewController.swift in Sources */,
+				94DC670928F3D5A8002F5B32 /* PdfViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
